@@ -1,0 +1,6 @@
+//Какой процент обучающихся родился в 2000 году? Результат округлить до целого в меньшую сторону.
+//Используйте конструкцию "as percent" для указания процента. Это необходимо для корректной проверки.
+
+Select floor(Count(id)* 100 /(Select Count(id)
+from Student)) as percent from Student
+Where birthday like '2000-%' 
