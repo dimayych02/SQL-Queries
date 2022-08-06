@@ -4,3 +4,9 @@
 
 Select  trip , count(passenger) as count  from Pass_in_trip
 Group by trip
+//Вывести имена людей, у которых есть полный тёзка среди пассажиров
+//Поля в результирующей таблице:name
+Select name from Passenger
+Group by name
+Having count(id)>1
+ Результат: Bruce Willis
