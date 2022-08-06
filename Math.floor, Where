@@ -4,3 +4,4 @@
 Select floor(Count(id)* 100 /(Select Count(id)
 from Student)) as percent from Student
 Where birthday like '2000-%' 
+//Результат: 15
