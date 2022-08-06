@@ -1,0 +1,24 @@
+//Вывести отсортированный по количеству перелетов (по убыванию) и имени (по возрастанию) список пассажиров, совершивших хотя бы 1 полет.
+//Поля в результирующей таблице:name, count
+//Используйте конструкцию "as count" для агрегатной функции подсчета количества перелетов. Это необходимо для корректной проверки.
+
+Select name,count(passenger ) as count from Pass_in_trip,Passenger
+Where Pass_in_trip.passenger  = Passenger.id
+Group by name 
+Having count >=1
+Order by count desc , name asc
+
+//Результат:
+//Michael Caine	4
+//Mullah Omar	4
+//Bruce Willis	3
+//Harrison Ford	3
+//Jennifer Lopez	3
+//Kurt Russell	3
+//Nikole Kidman	3
+//Kevin Costner	2
+//Ray Liotta	2
+//Steve Martin	2
+//Alan Rickman	1
+//George Clooney	1
+//Russell Crowe	1
