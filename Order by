@@ -1,0 +1,6 @@
+//Вывести пассажиров с самым длинным именем
+//Поля в результирующей таблице:
+name
+Select name  from passenger 
+Order by LENGTH(name) desc limit 1
+//Результат: Catherine Zeta-Jones
